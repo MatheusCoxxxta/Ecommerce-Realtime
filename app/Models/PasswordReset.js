@@ -7,7 +7,7 @@ class PasswordReset extends Model {
     static boot() {
         super.boot()
 
-        this.addHook('beforeCreate', async model => {
+        this.addHook('beforeCreate', async (model) => { //em caso de erro, tirar parentesis
             model.token = await str_ramdom(25)
 
             const expires_at = new Date()
