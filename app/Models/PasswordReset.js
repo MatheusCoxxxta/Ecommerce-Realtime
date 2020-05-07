@@ -3,6 +3,8 @@
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
 
+const { str_ramdom } = use('App/Helpers')
+
 class PasswordReset extends Model {
     static boot() {
         super.boot()
